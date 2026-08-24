@@ -1,0 +1,2806 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cc53adca95f755658a74725e8a9077d1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    <div style="position: fixed; bottom: 30px; left: 30px; z-index:9999; background:white; padding:10px; border:1px solid #aaa; font-size:13px"><b>States</b><br>🔵 Texas<br>🟢 Oklahoma<br>🟣 Arkansas<br>🟠 Louisiana<br>🔷 Kansas<br>🔴 Missouri<br>🟢 Mississippi<br><br>Dashed circle = approximate 7-hour / 420-mile footprint</div>
+    
+            <div class="folium-map" id="map_cc53adca95f755658a74725e8a9077d1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_cc53adca95f755658a74725e8a9077d1 = L.map(
+                "map_cc53adca95f755658a74725e8a9077d1",
+                {
+                    center: [32.843, -96.784],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_401d2f45dd2db01fe0d6f736d291af10 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_401d2f45dd2db01fe0d6f736d291af10.addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var marker_1ccabf4ad73db83b49da1902bb9b7e61 = L.marker(
+                [32.843, -96.784],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_aa12b151b76fd5a521bf21329fc265df = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_016c4131a853dfb3a4dfc852ef100d4f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d44b3cddc2fb9198bc38c79c74a9ea8b = $(`<div id="html_d44b3cddc2fb9198bc38c79c74a9ea8b" style="width: 100.0%; height: 100.0%;"><b>Southern Methodist University</b><br>Dallas, Texas</div>`)[0];
+                popup_016c4131a853dfb3a4dfc852ef100d4f.setContent(html_d44b3cddc2fb9198bc38c79c74a9ea8b);
+            
+        
+
+        marker_1ccabf4ad73db83b49da1902bb9b7e61.bindPopup(popup_016c4131a853dfb3a4dfc852ef100d4f)
+        ;
+
+        
+    
+    
+            marker_1ccabf4ad73db83b49da1902bb9b7e61.bindTooltip(
+                `<div>
+                     Southern Methodist University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1ccabf4ad73db83b49da1902bb9b7e61.setIcon(icon_aa12b151b76fd5a521bf21329fc265df);
+            
+    
+            var circle_583a5e6de5ab693c79959d33e245316f = L.circle(
+                [32.843, -96.784],
+                {"bubblingMouseEvents": true, "color": "#555555", "dashArray": "8,8", "dashOffset": null, "fill": false, "fillColor": "#555555", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 675924.48, "stroke": true, "weight": 2}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            circle_583a5e6de5ab693c79959d33e245316f.bindTooltip(
+                `<div>
+                     Approx. 7-hour footprint (~420 miles)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4f9fb3ee9667613b4fd6bc9550833c1c = L.marker(
+                [32.986, -96.75],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_d564d1aba35700102af1cbd51ce930cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_57892eef1f213b6292d9f7a9e274dfd7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b34e8249f6ecfbe63b82b90f2fd07619 = $(`<div id="html_b34e8249f6ecfbe63b82b90f2fd07619" style="width: 100.0%; height: 100.0%;"><b>University of Texas at Dallas</b><br>Richardson, Texas</div>`)[0];
+                popup_57892eef1f213b6292d9f7a9e274dfd7.setContent(html_b34e8249f6ecfbe63b82b90f2fd07619);
+            
+        
+
+        marker_4f9fb3ee9667613b4fd6bc9550833c1c.bindPopup(popup_57892eef1f213b6292d9f7a9e274dfd7)
+        ;
+
+        
+    
+    
+            marker_4f9fb3ee9667613b4fd6bc9550833c1c.bindTooltip(
+                `<div>
+                     University of Texas at Dallas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4f9fb3ee9667613b4fd6bc9550833c1c.setIcon(icon_d564d1aba35700102af1cbd51ce930cb);
+            
+    
+            var marker_061198c603dbcd4d663992affc486c12 = L.marker(
+                [33.21, -97.152],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_9971114178e00cff7110f99dd368eae9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77b27eae49e8ec7fdbd3667804231f29 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ff7950662605a108bcc47556f774279 = $(`<div id="html_0ff7950662605a108bcc47556f774279" style="width: 100.0%; height: 100.0%;"><b>University of North Texas</b><br>Denton, Texas</div>`)[0];
+                popup_77b27eae49e8ec7fdbd3667804231f29.setContent(html_0ff7950662605a108bcc47556f774279);
+            
+        
+
+        marker_061198c603dbcd4d663992affc486c12.bindPopup(popup_77b27eae49e8ec7fdbd3667804231f29)
+        ;
+
+        
+    
+    
+            marker_061198c603dbcd4d663992affc486c12.bindTooltip(
+                `<div>
+                     University of North Texas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_061198c603dbcd4d663992affc486c12.setIcon(icon_9971114178e00cff7110f99dd368eae9);
+            
+    
+            var marker_4ad534c8ab2d199f825ddc5afc055ad5 = L.marker(
+                [32.73, -97.115],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_f4a8f5ef210559a23636ea62b49c3fb7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ea9228413fb52a7bbcd9ecc87ab0b9c6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef68e66c46443dd17ea1238b7846c757 = $(`<div id="html_ef68e66c46443dd17ea1238b7846c757" style="width: 100.0%; height: 100.0%;"><b>University of Texas at Arlington</b><br>Arlington, Texas</div>`)[0];
+                popup_ea9228413fb52a7bbcd9ecc87ab0b9c6.setContent(html_ef68e66c46443dd17ea1238b7846c757);
+            
+        
+
+        marker_4ad534c8ab2d199f825ddc5afc055ad5.bindPopup(popup_ea9228413fb52a7bbcd9ecc87ab0b9c6)
+        ;
+
+        
+    
+    
+            marker_4ad534c8ab2d199f825ddc5afc055ad5.bindTooltip(
+                `<div>
+                     University of Texas at Arlington
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4ad534c8ab2d199f825ddc5afc055ad5.setIcon(icon_f4a8f5ef210559a23636ea62b49c3fb7);
+            
+    
+            var marker_d519978e24e5b21dba48a5b0a77eef90 = L.marker(
+                [32.709, -97.368],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_82b2f08acf1aebc7490b875f648989e2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e5cdfd686cf7ddca4f04eec2fa225ff4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d846cebe05e7e7baf4b709c9b95cb3d9 = $(`<div id="html_d846cebe05e7e7baf4b709c9b95cb3d9" style="width: 100.0%; height: 100.0%;"><b>Texas Christian University</b><br>Fort Worth, Texas</div>`)[0];
+                popup_e5cdfd686cf7ddca4f04eec2fa225ff4.setContent(html_d846cebe05e7e7baf4b709c9b95cb3d9);
+            
+        
+
+        marker_d519978e24e5b21dba48a5b0a77eef90.bindPopup(popup_e5cdfd686cf7ddca4f04eec2fa225ff4)
+        ;
+
+        
+    
+    
+            marker_d519978e24e5b21dba48a5b0a77eef90.bindTooltip(
+                `<div>
+                     Texas Christian University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d519978e24e5b21dba48a5b0a77eef90.setIcon(icon_82b2f08acf1aebc7490b875f648989e2);
+            
+    
+            var marker_4e7ca6f54cddbc857670d6801d548973 = L.marker(
+                [33.227, -97.129],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_2213d6c6bad2d2928ad1f020bc22918a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d120ee61b379fb3db1103334c2407c85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ab0b6c110dbb49911470bc7ad323c268 = $(`<div id="html_ab0b6c110dbb49911470bc7ad323c268" style="width: 100.0%; height: 100.0%;"><b>Texas Woman’s University</b><br>Denton, Texas</div>`)[0];
+                popup_d120ee61b379fb3db1103334c2407c85.setContent(html_ab0b6c110dbb49911470bc7ad323c268);
+            
+        
+
+        marker_4e7ca6f54cddbc857670d6801d548973.bindPopup(popup_d120ee61b379fb3db1103334c2407c85)
+        ;
+
+        
+    
+    
+            marker_4e7ca6f54cddbc857670d6801d548973.bindTooltip(
+                `<div>
+                     Texas Woman’s University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4e7ca6f54cddbc857670d6801d548973.setIcon(icon_2213d6c6bad2d2928ad1f020bc22918a);
+            
+    
+            var marker_39bac5b13f2f116f05d210bfee55f7e2 = L.marker(
+                [31.548, -97.114],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_d260287b79d88ff997d0cbee86651591 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4358080a36c5046432408c533123dc0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_48bdc5e25ad64ebf90fb188f136e750a = $(`<div id="html_48bdc5e25ad64ebf90fb188f136e750a" style="width: 100.0%; height: 100.0%;"><b>Baylor University</b><br>Waco, Texas</div>`)[0];
+                popup_4358080a36c5046432408c533123dc0b.setContent(html_48bdc5e25ad64ebf90fb188f136e750a);
+            
+        
+
+        marker_39bac5b13f2f116f05d210bfee55f7e2.bindPopup(popup_4358080a36c5046432408c533123dc0b)
+        ;
+
+        
+    
+    
+            marker_39bac5b13f2f116f05d210bfee55f7e2.bindTooltip(
+                `<div>
+                     Baylor University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_39bac5b13f2f116f05d210bfee55f7e2.setIcon(icon_d260287b79d88ff997d0cbee86651591);
+            
+    
+            var marker_f7752afd0b2c235a4a18957a09f50e61 = L.marker(
+                [31.066, -97.465],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_28aa13fd341ab7c8679543ac7a0d8aca = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fec8bf5ca52596a22b8911c5aaa8271b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_96f8d4251f550b4c3bb38331a123dd7a = $(`<div id="html_96f8d4251f550b4c3bb38331a123dd7a" style="width: 100.0%; height: 100.0%;"><b>University of Mary Hardin-Baylor</b><br>Belton, Texas</div>`)[0];
+                popup_fec8bf5ca52596a22b8911c5aaa8271b.setContent(html_96f8d4251f550b4c3bb38331a123dd7a);
+            
+        
+
+        marker_f7752afd0b2c235a4a18957a09f50e61.bindPopup(popup_fec8bf5ca52596a22b8911c5aaa8271b)
+        ;
+
+        
+    
+    
+            marker_f7752afd0b2c235a4a18957a09f50e61.bindTooltip(
+                `<div>
+                     University of Mary Hardin-Baylor
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f7752afd0b2c235a4a18957a09f50e61.setIcon(icon_28aa13fd341ab7c8679543ac7a0d8aca);
+            
+    
+            var marker_85eb295580f2421510b40743f0406ecb = L.marker(
+                [29.888, -97.938],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_a51c4a44974553ff91a9bfe061136429 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f5411e00e3f9ba53a2f05a185e8d448e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a987c8f5fef2c8a3976e1c550814b96 = $(`<div id="html_6a987c8f5fef2c8a3976e1c550814b96" style="width: 100.0%; height: 100.0%;"><b>Texas State University</b><br>San Marcos, Texas</div>`)[0];
+                popup_f5411e00e3f9ba53a2f05a185e8d448e.setContent(html_6a987c8f5fef2c8a3976e1c550814b96);
+            
+        
+
+        marker_85eb295580f2421510b40743f0406ecb.bindPopup(popup_f5411e00e3f9ba53a2f05a185e8d448e)
+        ;
+
+        
+    
+    
+            marker_85eb295580f2421510b40743f0406ecb.bindTooltip(
+                `<div>
+                     Texas State University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_85eb295580f2421510b40743f0406ecb.setIcon(icon_a51c4a44974553ff91a9bfe061136429);
+            
+    
+            var marker_e23a06fa1925afd1489a38176e86672e = L.marker(
+                [30.285, -97.733],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_bf3d6685f57063b5a9b11040fd5a6c26 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_74d81e02f286f725db8bdf1e41741dbd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_276b1eae4dc06138ef138c4c5d3ea631 = $(`<div id="html_276b1eae4dc06138ef138c4c5d3ea631" style="width: 100.0%; height: 100.0%;"><b>University of Texas at Austin</b><br>Austin, Texas</div>`)[0];
+                popup_74d81e02f286f725db8bdf1e41741dbd.setContent(html_276b1eae4dc06138ef138c4c5d3ea631);
+            
+        
+
+        marker_e23a06fa1925afd1489a38176e86672e.bindPopup(popup_74d81e02f286f725db8bdf1e41741dbd)
+        ;
+
+        
+    
+    
+            marker_e23a06fa1925afd1489a38176e86672e.bindTooltip(
+                `<div>
+                     University of Texas at Austin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e23a06fa1925afd1489a38176e86672e.setIcon(icon_bf3d6685f57063b5a9b11040fd5a6c26);
+            
+    
+            var marker_350fb74ff4da43d0b137a5c430f5a28e = L.marker(
+                [30.23, -97.758],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_fab837453d7df003c0e2339dfb7c4e78 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5235bc235d2d08cc68c6b404e1f295b9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_28b18b3dfa3d1ff379f0c42e7eff4fb8 = $(`<div id="html_28b18b3dfa3d1ff379f0c42e7eff4fb8" style="width: 100.0%; height: 100.0%;"><b>St. Edward’s University</b><br>Austin, Texas</div>`)[0];
+                popup_5235bc235d2d08cc68c6b404e1f295b9.setContent(html_28b18b3dfa3d1ff379f0c42e7eff4fb8);
+            
+        
+
+        marker_350fb74ff4da43d0b137a5c430f5a28e.bindPopup(popup_5235bc235d2d08cc68c6b404e1f295b9)
+        ;
+
+        
+    
+    
+            marker_350fb74ff4da43d0b137a5c430f5a28e.bindTooltip(
+                `<div>
+                     St. Edward’s University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_350fb74ff4da43d0b137a5c430f5a28e.setIcon(icon_fab837453d7df003c0e2339dfb7c4e78);
+            
+    
+            var marker_ab84dc1729e9d75dc474d140ec85c789 = L.marker(
+                [30.277, -97.725],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_2e27882086fa344bf204fd386d467683 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_db8c05db57ee31fa0d1eaa21b8d5e135 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f7a6022f24df85919dbd9b8cbed9825f = $(`<div id="html_f7a6022f24df85919dbd9b8cbed9825f" style="width: 100.0%; height: 100.0%;"><b>Huston-Tillotson University</b><br>Austin, Texas</div>`)[0];
+                popup_db8c05db57ee31fa0d1eaa21b8d5e135.setContent(html_f7a6022f24df85919dbd9b8cbed9825f);
+            
+        
+
+        marker_ab84dc1729e9d75dc474d140ec85c789.bindPopup(popup_db8c05db57ee31fa0d1eaa21b8d5e135)
+        ;
+
+        
+    
+    
+            marker_ab84dc1729e9d75dc474d140ec85c789.bindTooltip(
+                `<div>
+                     Huston-Tillotson University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ab84dc1729e9d75dc474d140ec85c789.setIcon(icon_2e27882086fa344bf204fd386d467683);
+            
+    
+            var marker_c029b73f2c44f382ea70d547955b3459 = L.marker(
+                [29.719, -95.342],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_2651dc42679d585e76aa71ab33febd89 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9c1e6134db74cb62e405f3e2666ff65c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_289cbe0f0f44cec5188ece285d0e6674 = $(`<div id="html_289cbe0f0f44cec5188ece285d0e6674" style="width: 100.0%; height: 100.0%;"><b>University of Houston</b><br>Houston, Texas</div>`)[0];
+                popup_9c1e6134db74cb62e405f3e2666ff65c.setContent(html_289cbe0f0f44cec5188ece285d0e6674);
+            
+        
+
+        marker_c029b73f2c44f382ea70d547955b3459.bindPopup(popup_9c1e6134db74cb62e405f3e2666ff65c)
+        ;
+
+        
+    
+    
+            marker_c029b73f2c44f382ea70d547955b3459.bindTooltip(
+                `<div>
+                     University of Houston
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c029b73f2c44f382ea70d547955b3459.setIcon(icon_2651dc42679d585e76aa71ab33febd89);
+            
+    
+            var marker_5379604fcc68f4fb47b101d7cada1d41 = L.marker(
+                [29.717, -95.401],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_6549748b269ca3ee16682b5afe6a262c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b10d3f41b874fd6d09303794feafc0ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7b3650b8528aa9c0de85acc0286dfa0 = $(`<div id="html_e7b3650b8528aa9c0de85acc0286dfa0" style="width: 100.0%; height: 100.0%;"><b>Rice University</b><br>Houston, Texas</div>`)[0];
+                popup_b10d3f41b874fd6d09303794feafc0ec.setContent(html_e7b3650b8528aa9c0de85acc0286dfa0);
+            
+        
+
+        marker_5379604fcc68f4fb47b101d7cada1d41.bindPopup(popup_b10d3f41b874fd6d09303794feafc0ec)
+        ;
+
+        
+    
+    
+            marker_5379604fcc68f4fb47b101d7cada1d41.bindTooltip(
+                `<div>
+                     Rice University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5379604fcc68f4fb47b101d7cada1d41.setIcon(icon_6549748b269ca3ee16682b5afe6a262c);
+            
+    
+            var marker_d7ec8c66c0fc52497801847037d39cee = L.marker(
+                [29.722, -95.362],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_1d35ebca1b07184af3c397e87be72c1b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4c6c0b4b018cf1731ea96b3cde8b1e09 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef7bff8a9f45706fa97159ed585804b7 = $(`<div id="html_ef7bff8a9f45706fa97159ed585804b7" style="width: 100.0%; height: 100.0%;"><b>Texas Southern University</b><br>Houston, Texas</div>`)[0];
+                popup_4c6c0b4b018cf1731ea96b3cde8b1e09.setContent(html_ef7bff8a9f45706fa97159ed585804b7);
+            
+        
+
+        marker_d7ec8c66c0fc52497801847037d39cee.bindPopup(popup_4c6c0b4b018cf1731ea96b3cde8b1e09)
+        ;
+
+        
+    
+    
+            marker_d7ec8c66c0fc52497801847037d39cee.bindTooltip(
+                `<div>
+                     Texas Southern University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d7ec8c66c0fc52497801847037d39cee.setIcon(icon_1d35ebca1b07184af3c397e87be72c1b);
+            
+    
+            var marker_405643cf39fe45362a687b7626cae74a = L.marker(
+                [29.582, -98.62],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_8e6479ec6cd4e66ff8d43c033387c7b1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3128630fc25fce6c449e6f290285134d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_103ca6113eb1ff75e7aa5fe33a42aab7 = $(`<div id="html_103ca6113eb1ff75e7aa5fe33a42aab7" style="width: 100.0%; height: 100.0%;"><b>University of Texas at San Antonio</b><br>San Antonio, Texas</div>`)[0];
+                popup_3128630fc25fce6c449e6f290285134d.setContent(html_103ca6113eb1ff75e7aa5fe33a42aab7);
+            
+        
+
+        marker_405643cf39fe45362a687b7626cae74a.bindPopup(popup_3128630fc25fce6c449e6f290285134d)
+        ;
+
+        
+    
+    
+            marker_405643cf39fe45362a687b7626cae74a.bindTooltip(
+                `<div>
+                     University of Texas at San Antonio
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_405643cf39fe45362a687b7626cae74a.setIcon(icon_8e6479ec6cd4e66ff8d43c033387c7b1);
+            
+    
+            var marker_f4ca17d08afd47f943d7279189316b6b = L.marker(
+                [29.462, -98.485],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_a771a1753f6d00c7c4f6fb05dd714e45 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3aba2b08d6fe68b0ddba49de9200b62e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02eed4ffcb3190c190d95551a8632570 = $(`<div id="html_02eed4ffcb3190c190d95551a8632570" style="width: 100.0%; height: 100.0%;"><b>Trinity University</b><br>San Antonio, Texas</div>`)[0];
+                popup_3aba2b08d6fe68b0ddba49de9200b62e.setContent(html_02eed4ffcb3190c190d95551a8632570);
+            
+        
+
+        marker_f4ca17d08afd47f943d7279189316b6b.bindPopup(popup_3aba2b08d6fe68b0ddba49de9200b62e)
+        ;
+
+        
+    
+    
+            marker_f4ca17d08afd47f943d7279189316b6b.bindTooltip(
+                `<div>
+                     Trinity University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f4ca17d08afd47f943d7279189316b6b.setIcon(icon_a771a1753f6d00c7c4f6fb05dd714e45);
+            
+    
+            var marker_e48f4a1d7af370897fd758aa59111e5a = L.marker(
+                [29.453, -98.563],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_90315ac5fd7cb01c8776427976583161 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f6df3bd298bf9a4f7e7136b07acc9b8a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1b44de01850dbfe1c9d498728018b66f = $(`<div id="html_1b44de01850dbfe1c9d498728018b66f" style="width: 100.0%; height: 100.0%;"><b>St. Mary’s University</b><br>San Antonio, Texas</div>`)[0];
+                popup_f6df3bd298bf9a4f7e7136b07acc9b8a.setContent(html_1b44de01850dbfe1c9d498728018b66f);
+            
+        
+
+        marker_e48f4a1d7af370897fd758aa59111e5a.bindPopup(popup_f6df3bd298bf9a4f7e7136b07acc9b8a)
+        ;
+
+        
+    
+    
+            marker_e48f4a1d7af370897fd758aa59111e5a.bindTooltip(
+                `<div>
+                     St. Mary’s University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e48f4a1d7af370897fd758aa59111e5a.setIcon(icon_90315ac5fd7cb01c8776427976583161);
+            
+    
+            var marker_946b46b45e58b08f83d4d3a1e946e602 = L.marker(
+                [29.468, -98.467],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_6a21d94d6f9b09eb358f53822581397c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6ef5727df5af8207881835d3c1859b86 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c4aa6fac3d371648e0d7bbd4f7285939 = $(`<div id="html_c4aa6fac3d371648e0d7bbd4f7285939" style="width: 100.0%; height: 100.0%;"><b>University of the Incarnate Word</b><br>San Antonio, Texas</div>`)[0];
+                popup_6ef5727df5af8207881835d3c1859b86.setContent(html_c4aa6fac3d371648e0d7bbd4f7285939);
+            
+        
+
+        marker_946b46b45e58b08f83d4d3a1e946e602.bindPopup(popup_6ef5727df5af8207881835d3c1859b86)
+        ;
+
+        
+    
+    
+            marker_946b46b45e58b08f83d4d3a1e946e602.bindTooltip(
+                `<div>
+                     University of the Incarnate Word
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_946b46b45e58b08f83d4d3a1e946e602.setIcon(icon_6a21d94d6f9b09eb358f53822581397c);
+            
+    
+            var marker_a000f3d81caee55a1cfe8225e6054440 = L.marker(
+                [29.322, -98.438],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_d628489083826f6c7badbfc80d559cbe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_58dba17007208e088b9717bc5eb1c8c3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_99c1021065a265723ced66187b7429fb = $(`<div id="html_99c1021065a265723ced66187b7429fb" style="width: 100.0%; height: 100.0%;"><b>Texas A&M University–San Antonio</b><br>San Antonio, Texas</div>`)[0];
+                popup_58dba17007208e088b9717bc5eb1c8c3.setContent(html_99c1021065a265723ced66187b7429fb);
+            
+        
+
+        marker_a000f3d81caee55a1cfe8225e6054440.bindPopup(popup_58dba17007208e088b9717bc5eb1c8c3)
+        ;
+
+        
+    
+    
+            marker_a000f3d81caee55a1cfe8225e6054440.bindTooltip(
+                `<div>
+                     Texas A&M University–San Antonio
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a000f3d81caee55a1cfe8225e6054440.setIcon(icon_d628489083826f6c7badbfc80d559cbe);
+            
+    
+            var marker_13be77757b3b693d3d008c500be795d8 = L.marker(
+                [33.584, -101.875],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_3403273382abf428d7ab4d3869c13608 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_43e253d4c488987633adcea5d3356e5d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_08327b42b9352e3fa33205d2d42f4ea7 = $(`<div id="html_08327b42b9352e3fa33205d2d42f4ea7" style="width: 100.0%; height: 100.0%;"><b>Texas Tech University</b><br>Lubbock, Texas</div>`)[0];
+                popup_43e253d4c488987633adcea5d3356e5d.setContent(html_08327b42b9352e3fa33205d2d42f4ea7);
+            
+        
+
+        marker_13be77757b3b693d3d008c500be795d8.bindPopup(popup_43e253d4c488987633adcea5d3356e5d)
+        ;
+
+        
+    
+    
+            marker_13be77757b3b693d3d008c500be795d8.bindTooltip(
+                `<div>
+                     Texas Tech University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_13be77757b3b693d3d008c500be795d8.setIcon(icon_3403273382abf428d7ab4d3869c13608);
+            
+    
+            var marker_583c3da6ef86ed3cb72a1aec839b414a = L.marker(
+                [32.47, -99.708],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_3177e961fe1438604312e5a9baea31d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c5a708f1a949db2ba99e936053466a65 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d640d6962ce16c00fc768439229f24cd = $(`<div id="html_d640d6962ce16c00fc768439229f24cd" style="width: 100.0%; height: 100.0%;"><b>Abilene Christian University</b><br>Abilene, Texas</div>`)[0];
+                popup_c5a708f1a949db2ba99e936053466a65.setContent(html_d640d6962ce16c00fc768439229f24cd);
+            
+        
+
+        marker_583c3da6ef86ed3cb72a1aec839b414a.bindPopup(popup_c5a708f1a949db2ba99e936053466a65)
+        ;
+
+        
+    
+    
+            marker_583c3da6ef86ed3cb72a1aec839b414a.bindTooltip(
+                `<div>
+                     Abilene Christian University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_583c3da6ef86ed3cb72a1aec839b414a.setIcon(icon_3177e961fe1438604312e5a9baea31d8);
+            
+    
+            var marker_6ca7b2b78a390a9db814cf567d3322fb = L.marker(
+                [32.459, -99.733],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_275a3e60cf026fca8fe3846a7b545cf7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_61dff25033e86f3677acd676c51abd36 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f85d19d46f8733e5b59c45f99337716e = $(`<div id="html_f85d19d46f8733e5b59c45f99337716e" style="width: 100.0%; height: 100.0%;"><b>Hardin-Simmons University</b><br>Abilene, Texas</div>`)[0];
+                popup_61dff25033e86f3677acd676c51abd36.setContent(html_f85d19d46f8733e5b59c45f99337716e);
+            
+        
+
+        marker_6ca7b2b78a390a9db814cf567d3322fb.bindPopup(popup_61dff25033e86f3677acd676c51abd36)
+        ;
+
+        
+    
+    
+            marker_6ca7b2b78a390a9db814cf567d3322fb.bindTooltip(
+                `<div>
+                     Hardin-Simmons University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6ca7b2b78a390a9db814cf567d3322fb.setIcon(icon_275a3e60cf026fca8fe3846a7b545cf7);
+            
+    
+            var marker_8fdf9349e606a51b2cd34e0ada84919e = L.marker(
+                [31.44, -100.458],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_2024ef184d955af9398049db86c8eff8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_10efd3872aa6aba3b12ae1cc17b18382 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c051b9356f2c2160a62096f19dbdd03b = $(`<div id="html_c051b9356f2c2160a62096f19dbdd03b" style="width: 100.0%; height: 100.0%;"><b>Angelo State University</b><br>San Angelo, Texas</div>`)[0];
+                popup_10efd3872aa6aba3b12ae1cc17b18382.setContent(html_c051b9356f2c2160a62096f19dbdd03b);
+            
+        
+
+        marker_8fdf9349e606a51b2cd34e0ada84919e.bindPopup(popup_10efd3872aa6aba3b12ae1cc17b18382)
+        ;
+
+        
+    
+    
+            marker_8fdf9349e606a51b2cd34e0ada84919e.bindTooltip(
+                `<div>
+                     Angelo State University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8fdf9349e606a51b2cd34e0ada84919e.setIcon(icon_2024ef184d955af9398049db86c8eff8);
+            
+    
+            var marker_f8b18d176fa233745e94a5559275835a = L.marker(
+                [35.206, -97.445],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_bdcb1cdaaa0ecbecc8879f69e7793b12 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c0caf821c7f21385d99590bea01530ef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a3ec15e02800783854b485f34e5c79e3 = $(`<div id="html_a3ec15e02800783854b485f34e5c79e3" style="width: 100.0%; height: 100.0%;"><b>University of Oklahoma</b><br>Norman, Oklahoma</div>`)[0];
+                popup_c0caf821c7f21385d99590bea01530ef.setContent(html_a3ec15e02800783854b485f34e5c79e3);
+            
+        
+
+        marker_f8b18d176fa233745e94a5559275835a.bindPopup(popup_c0caf821c7f21385d99590bea01530ef)
+        ;
+
+        
+    
+    
+            marker_f8b18d176fa233745e94a5559275835a.bindTooltip(
+                `<div>
+                     University of Oklahoma
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f8b18d176fa233745e94a5559275835a.setIcon(icon_bdcb1cdaaa0ecbecc8879f69e7793b12);
+            
+    
+            var marker_30c3b22971b2eba51e361229284d29a2 = L.marker(
+                [36.127, -97.073],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_fe925a8ca0fd9296d31718441e49c7d2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cfda8f303480961cebf0c68ca1f4667a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e058573b311eef152170bd4ecc4b5b9e = $(`<div id="html_e058573b311eef152170bd4ecc4b5b9e" style="width: 100.0%; height: 100.0%;"><b>Oklahoma State University</b><br>Stillwater, Oklahoma</div>`)[0];
+                popup_cfda8f303480961cebf0c68ca1f4667a.setContent(html_e058573b311eef152170bd4ecc4b5b9e);
+            
+        
+
+        marker_30c3b22971b2eba51e361229284d29a2.bindPopup(popup_cfda8f303480961cebf0c68ca1f4667a)
+        ;
+
+        
+    
+    
+            marker_30c3b22971b2eba51e361229284d29a2.bindTooltip(
+                `<div>
+                     Oklahoma State University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_30c3b22971b2eba51e361229284d29a2.setIcon(icon_fe925a8ca0fd9296d31718441e49c7d2);
+            
+    
+            var marker_8e025d4fc41ea15279f69e903d2e59b0 = L.marker(
+                [35.656, -97.472],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_9118fc914acf34284208fdd1cb5ba873 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e18f76f6482602bba8705e0ed5241f86 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c467a08de2edd358c1aa9973778cf5e = $(`<div id="html_2c467a08de2edd358c1aa9973778cf5e" style="width: 100.0%; height: 100.0%;"><b>University of Central Oklahoma</b><br>Edmond, Oklahoma</div>`)[0];
+                popup_e18f76f6482602bba8705e0ed5241f86.setContent(html_2c467a08de2edd358c1aa9973778cf5e);
+            
+        
+
+        marker_8e025d4fc41ea15279f69e903d2e59b0.bindPopup(popup_e18f76f6482602bba8705e0ed5241f86)
+        ;
+
+        
+    
+    
+            marker_8e025d4fc41ea15279f69e903d2e59b0.bindTooltip(
+                `<div>
+                     University of Central Oklahoma
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8e025d4fc41ea15279f69e903d2e59b0.setIcon(icon_9118fc914acf34284208fdd1cb5ba873);
+            
+    
+            var marker_761002b524988a6d1161200dc361bb98 = L.marker(
+                [35.468, -97.52],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_5f0ee44063546cf628b4bd16c9b70324 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_391084e894deee9f77ce94ac464325d2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cdb209bbc4ac85992fb2b5a70a5ded92 = $(`<div id="html_cdb209bbc4ac85992fb2b5a70a5ded92" style="width: 100.0%; height: 100.0%;"><b>Oklahoma City University</b><br>Oklahoma City, Oklahoma</div>`)[0];
+                popup_391084e894deee9f77ce94ac464325d2.setContent(html_cdb209bbc4ac85992fb2b5a70a5ded92);
+            
+        
+
+        marker_761002b524988a6d1161200dc361bb98.bindPopup(popup_391084e894deee9f77ce94ac464325d2)
+        ;
+
+        
+    
+    
+            marker_761002b524988a6d1161200dc361bb98.bindTooltip(
+                `<div>
+                     Oklahoma City University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_761002b524988a6d1161200dc361bb98.setIcon(icon_5f0ee44063546cf628b4bd16c9b70324);
+            
+    
+            var marker_13d04f5cfdee857c60ca1302d105a5d7 = L.marker(
+                [35.658, -97.472],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_7197f15b9c8a97bdadc294677fb41a4f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29be8feac3250d850b0dccf5baf0bdb2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ecd9d8d6611b06da39010b5eaa503b1 = $(`<div id="html_2ecd9d8d6611b06da39010b5eaa503b1" style="width: 100.0%; height: 100.0%;"><b>Oklahoma Christian University</b><br>Edmond, Oklahoma</div>`)[0];
+                popup_29be8feac3250d850b0dccf5baf0bdb2.setContent(html_2ecd9d8d6611b06da39010b5eaa503b1);
+            
+        
+
+        marker_13d04f5cfdee857c60ca1302d105a5d7.bindPopup(popup_29be8feac3250d850b0dccf5baf0bdb2)
+        ;
+
+        
+    
+    
+            marker_13d04f5cfdee857c60ca1302d105a5d7.bindTooltip(
+                `<div>
+                     Oklahoma Christian University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_13d04f5cfdee857c60ca1302d105a5d7.setIcon(icon_7197f15b9c8a97bdadc294677fb41a4f);
+            
+    
+            var marker_d923a40c1b5d58113ea86f0d1da7578d = L.marker(
+                [36.052, -95.948],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_3b75871311bb231b7710cd7dc296fe39 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0368c69ff0a35354227aef1e1a6a2b10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e6d1a428600fb102c9d692d3f9f4af47 = $(`<div id="html_e6d1a428600fb102c9d692d3f9f4af47" style="width: 100.0%; height: 100.0%;"><b>Oral Roberts University</b><br>Tulsa, Oklahoma</div>`)[0];
+                popup_0368c69ff0a35354227aef1e1a6a2b10.setContent(html_e6d1a428600fb102c9d692d3f9f4af47);
+            
+        
+
+        marker_d923a40c1b5d58113ea86f0d1da7578d.bindPopup(popup_0368c69ff0a35354227aef1e1a6a2b10)
+        ;
+
+        
+    
+    
+            marker_d923a40c1b5d58113ea86f0d1da7578d.bindTooltip(
+                `<div>
+                     Oral Roberts University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d923a40c1b5d58113ea86f0d1da7578d.setIcon(icon_3b75871311bb231b7710cd7dc296fe39);
+            
+    
+            var marker_54a2969920701192396c6d36dba39bb5 = L.marker(
+                [36.152, -95.946],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_38d4f41cdac6390c2a7543b8143bc705 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1747623de1e90f12c7fd84a21013fee1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e6db503e1f903c26bc66ea9047acdb81 = $(`<div id="html_e6db503e1f903c26bc66ea9047acdb81" style="width: 100.0%; height: 100.0%;"><b>University of Tulsa</b><br>Tulsa, Oklahoma</div>`)[0];
+                popup_1747623de1e90f12c7fd84a21013fee1.setContent(html_e6db503e1f903c26bc66ea9047acdb81);
+            
+        
+
+        marker_54a2969920701192396c6d36dba39bb5.bindPopup(popup_1747623de1e90f12c7fd84a21013fee1)
+        ;
+
+        
+    
+    
+            marker_54a2969920701192396c6d36dba39bb5.bindTooltip(
+                `<div>
+                     University of Tulsa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_54a2969920701192396c6d36dba39bb5.setIcon(icon_38d4f41cdac6390c2a7543b8143bc705);
+            
+    
+            var marker_546799655967c1d6c0446b967b01f325 = L.marker(
+                [36.068, -94.174],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_9fa7597af8f64052c8bc8396f12a4620 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ab648ffdf2794e9b1f90734f9a88cfc3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_674dfe54a19eba108e7e3fb5e7139f2d = $(`<div id="html_674dfe54a19eba108e7e3fb5e7139f2d" style="width: 100.0%; height: 100.0%;"><b>University of Arkansas</b><br>Fayetteville, Arkansas</div>`)[0];
+                popup_ab648ffdf2794e9b1f90734f9a88cfc3.setContent(html_674dfe54a19eba108e7e3fb5e7139f2d);
+            
+        
+
+        marker_546799655967c1d6c0446b967b01f325.bindPopup(popup_ab648ffdf2794e9b1f90734f9a88cfc3)
+        ;
+
+        
+    
+    
+            marker_546799655967c1d6c0446b967b01f325.bindTooltip(
+                `<div>
+                     University of Arkansas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_546799655967c1d6c0446b967b01f325.setIcon(icon_9fa7597af8f64052c8bc8396f12a4620);
+            
+    
+            var marker_9de8e4e51d41a042893e6cdf44c1dfd1 = L.marker(
+                [34.723, -92.34],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_53df7e4c56fb9501c312715a622285af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_367ad0cbed15ac63b36f071879ac4d46 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_82d2b00a74dd0930ecf7999cdf15ef04 = $(`<div id="html_82d2b00a74dd0930ecf7999cdf15ef04" style="width: 100.0%; height: 100.0%;"><b>University of Arkansas at Little Rock</b><br>Little Rock, Arkansas</div>`)[0];
+                popup_367ad0cbed15ac63b36f071879ac4d46.setContent(html_82d2b00a74dd0930ecf7999cdf15ef04);
+            
+        
+
+        marker_9de8e4e51d41a042893e6cdf44c1dfd1.bindPopup(popup_367ad0cbed15ac63b36f071879ac4d46)
+        ;
+
+        
+    
+    
+            marker_9de8e4e51d41a042893e6cdf44c1dfd1.bindTooltip(
+                `<div>
+                     University of Arkansas at Little Rock
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9de8e4e51d41a042893e6cdf44c1dfd1.setIcon(icon_53df7e4c56fb9501c312715a622285af);
+            
+    
+            var marker_ec3f90e66ce220d06a8122d9ca0664ee = L.marker(
+                [35.078, -92.46],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_2d184bc0bb199b382ea148ea6ac63ddb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ea0bc2715c4eeac61e73106321ef9003 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e5946fb642f6e7161b04bf2f34bb3cc = $(`<div id="html_7e5946fb642f6e7161b04bf2f34bb3cc" style="width: 100.0%; height: 100.0%;"><b>University of Central Arkansas</b><br>Conway, Arkansas</div>`)[0];
+                popup_ea0bc2715c4eeac61e73106321ef9003.setContent(html_7e5946fb642f6e7161b04bf2f34bb3cc);
+            
+        
+
+        marker_ec3f90e66ce220d06a8122d9ca0664ee.bindPopup(popup_ea0bc2715c4eeac61e73106321ef9003)
+        ;
+
+        
+    
+    
+            marker_ec3f90e66ce220d06a8122d9ca0664ee.bindTooltip(
+                `<div>
+                     University of Central Arkansas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ec3f90e66ce220d06a8122d9ca0664ee.setIcon(icon_2d184bc0bb199b382ea148ea6ac63ddb);
+            
+    
+            var marker_4f6a72130eee80dcd09cc17e03d61606 = L.marker(
+                [35.843, -90.678],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_9642caffd13ca172fb9ef316498aafa4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7897db02f181953d52c4b3331496a76c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61c05daae3df64b633f57447cfb158c6 = $(`<div id="html_61c05daae3df64b633f57447cfb158c6" style="width: 100.0%; height: 100.0%;"><b>Arkansas State University</b><br>Jonesboro, Arkansas</div>`)[0];
+                popup_7897db02f181953d52c4b3331496a76c.setContent(html_61c05daae3df64b633f57447cfb158c6);
+            
+        
+
+        marker_4f6a72130eee80dcd09cc17e03d61606.bindPopup(popup_7897db02f181953d52c4b3331496a76c)
+        ;
+
+        
+    
+    
+            marker_4f6a72130eee80dcd09cc17e03d61606.bindTooltip(
+                `<div>
+                     Arkansas State University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4f6a72130eee80dcd09cc17e03d61606.setIcon(icon_9642caffd13ca172fb9ef316498aafa4);
+            
+    
+            var marker_68e517c45ee64bd0c07ff3a95e060d09 = L.marker(
+                [35.251, -91.733],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_413bd15ceaad8015bb190ec6c3c5b354 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_524e966feaadd72892c9693b3de6554f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_efe7eee31d2db22b4c12a2fb728b116a = $(`<div id="html_efe7eee31d2db22b4c12a2fb728b116a" style="width: 100.0%; height: 100.0%;"><b>Harding University</b><br>Searcy, Arkansas</div>`)[0];
+                popup_524e966feaadd72892c9693b3de6554f.setContent(html_efe7eee31d2db22b4c12a2fb728b116a);
+            
+        
+
+        marker_68e517c45ee64bd0c07ff3a95e060d09.bindPopup(popup_524e966feaadd72892c9693b3de6554f)
+        ;
+
+        
+    
+    
+            marker_68e517c45ee64bd0c07ff3a95e060d09.bindTooltip(
+                `<div>
+                     Harding University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_68e517c45ee64bd0c07ff3a95e060d09.setIcon(icon_413bd15ceaad8015bb190ec6c3c5b354);
+            
+    
+            var marker_1f0013a1daf1548cf12c5e61a706ac8a = L.marker(
+                [30.413, -91.18],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_09135403ea3c5c74503d905ab802f3a8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c6146cf18b4a571d03ea735fc554bdb0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e18101e4d244e8fb017ac904d043dddc = $(`<div id="html_e18101e4d244e8fb017ac904d043dddc" style="width: 100.0%; height: 100.0%;"><b>Louisiana State University</b><br>Baton Rouge, Louisiana</div>`)[0];
+                popup_c6146cf18b4a571d03ea735fc554bdb0.setContent(html_e18101e4d244e8fb017ac904d043dddc);
+            
+        
+
+        marker_1f0013a1daf1548cf12c5e61a706ac8a.bindPopup(popup_c6146cf18b4a571d03ea735fc554bdb0)
+        ;
+
+        
+    
+    
+            marker_1f0013a1daf1548cf12c5e61a706ac8a.bindTooltip(
+                `<div>
+                     Louisiana State University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1f0013a1daf1548cf12c5e61a706ac8a.setIcon(icon_09135403ea3c5c74503d905ab802f3a8);
+            
+    
+            var marker_ed869cb7fd167fc2afa95da64cbf9074 = L.marker(
+                [29.94, -90.12],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_9b2ef7a315dcdad5b6500e7a12f191f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_851d0f2678472b18f30cd5b718430b2e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5e1c3a855781f0a25fc0275d83174e39 = $(`<div id="html_5e1c3a855781f0a25fc0275d83174e39" style="width: 100.0%; height: 100.0%;"><b>Tulane University</b><br>New Orleans, Louisiana</div>`)[0];
+                popup_851d0f2678472b18f30cd5b718430b2e.setContent(html_5e1c3a855781f0a25fc0275d83174e39);
+            
+        
+
+        marker_ed869cb7fd167fc2afa95da64cbf9074.bindPopup(popup_851d0f2678472b18f30cd5b718430b2e)
+        ;
+
+        
+    
+    
+            marker_ed869cb7fd167fc2afa95da64cbf9074.bindTooltip(
+                `<div>
+                     Tulane University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ed869cb7fd167fc2afa95da64cbf9074.setIcon(icon_9b2ef7a315dcdad5b6500e7a12f191f9);
+            
+    
+            var marker_80d7440985257cd472d7aa6e730d50ea = L.marker(
+                [29.939, -90.122],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_80c3f52c8b6ee386c8b18b5783ab49c3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e241be7e64ce2c1fe644b58705f3af1f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e07dc79aecdbd251d0748814b901c193 = $(`<div id="html_e07dc79aecdbd251d0748814b901c193" style="width: 100.0%; height: 100.0%;"><b>Loyola University New Orleans</b><br>New Orleans, Louisiana</div>`)[0];
+                popup_e241be7e64ce2c1fe644b58705f3af1f.setContent(html_e07dc79aecdbd251d0748814b901c193);
+            
+        
+
+        marker_80d7440985257cd472d7aa6e730d50ea.bindPopup(popup_e241be7e64ce2c1fe644b58705f3af1f)
+        ;
+
+        
+    
+    
+            marker_80d7440985257cd472d7aa6e730d50ea.bindTooltip(
+                `<div>
+                     Loyola University New Orleans
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_80d7440985257cd472d7aa6e730d50ea.setIcon(icon_80c3f52c8b6ee386c8b18b5783ab49c3);
+            
+    
+            var marker_0fd214daaa9653dfa328f5564e9ac4f0 = L.marker(
+                [29.962, -90.107],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_49c2f59837687933d651947dbd9d72a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2775e44b16f2c5ea20529c0bef16493d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e9072750b901c9debd570eba3b567f38 = $(`<div id="html_e9072750b901c9debd570eba3b567f38" style="width: 100.0%; height: 100.0%;"><b>Xavier University of Louisiana</b><br>New Orleans, Louisiana</div>`)[0];
+                popup_2775e44b16f2c5ea20529c0bef16493d.setContent(html_e9072750b901c9debd570eba3b567f38);
+            
+        
+
+        marker_0fd214daaa9653dfa328f5564e9ac4f0.bindPopup(popup_2775e44b16f2c5ea20529c0bef16493d)
+        ;
+
+        
+    
+    
+            marker_0fd214daaa9653dfa328f5564e9ac4f0.bindTooltip(
+                `<div>
+                     Xavier University of Louisiana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0fd214daaa9653dfa328f5564e9ac4f0.setIcon(icon_49c2f59837687933d651947dbd9d72a2);
+            
+    
+            var marker_0f635c09d6f4b5dbb1ddb3d70e968d42 = L.marker(
+                [30.028, -90.068],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_995d49e832fb53d02563b40b6152ee37 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eb610dcfa8da144a6ebd9cf559ac9658 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e0edc68e359cf94f4d7f1e707aa3396 = $(`<div id="html_0e0edc68e359cf94f4d7f1e707aa3396" style="width: 100.0%; height: 100.0%;"><b>University of New Orleans</b><br>New Orleans, Louisiana</div>`)[0];
+                popup_eb610dcfa8da144a6ebd9cf559ac9658.setContent(html_0e0edc68e359cf94f4d7f1e707aa3396);
+            
+        
+
+        marker_0f635c09d6f4b5dbb1ddb3d70e968d42.bindPopup(popup_eb610dcfa8da144a6ebd9cf559ac9658)
+        ;
+
+        
+    
+    
+            marker_0f635c09d6f4b5dbb1ddb3d70e968d42.bindTooltip(
+                `<div>
+                     University of New Orleans
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0f635c09d6f4b5dbb1ddb3d70e968d42.setIcon(icon_995d49e832fb53d02563b40b6152ee37);
+            
+    
+            var marker_e11f47bd2f3dacfbf3c7e7e4dc1480fb = L.marker(
+                [30.526, -91.19],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_a97aba81ee8043e1949f1c0de09a0cf9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_79f79d0b299584de467af601b8ce8eac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5d5d757e500ea5cd1c497fd82a13736f = $(`<div id="html_5d5d757e500ea5cd1c497fd82a13736f" style="width: 100.0%; height: 100.0%;"><b>Southern University and A&M College</b><br>Baton Rouge, Louisiana</div>`)[0];
+                popup_79f79d0b299584de467af601b8ce8eac.setContent(html_5d5d757e500ea5cd1c497fd82a13736f);
+            
+        
+
+        marker_e11f47bd2f3dacfbf3c7e7e4dc1480fb.bindPopup(popup_79f79d0b299584de467af601b8ce8eac)
+        ;
+
+        
+    
+    
+            marker_e11f47bd2f3dacfbf3c7e7e4dc1480fb.bindTooltip(
+                `<div>
+                     Southern University and A&M College
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e11f47bd2f3dacfbf3c7e7e4dc1480fb.setIcon(icon_a97aba81ee8043e1949f1c0de09a0cf9);
+            
+    
+            var marker_9f5a0379695bc7af1bdd7df6449ce9de = L.marker(
+                [30.215, -92.02],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_2fa803dd7465e4e1e31f5e6e910687f3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ffa33061889c6eca2f4c44417cab4a7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d6bd8050ed3f9cb8d074d4be2c63a8ad = $(`<div id="html_d6bd8050ed3f9cb8d074d4be2c63a8ad" style="width: 100.0%; height: 100.0%;"><b>University of Louisiana at Lafayette</b><br>Lafayette, Louisiana</div>`)[0];
+                popup_3ffa33061889c6eca2f4c44417cab4a7.setContent(html_d6bd8050ed3f9cb8d074d4be2c63a8ad);
+            
+        
+
+        marker_9f5a0379695bc7af1bdd7df6449ce9de.bindPopup(popup_3ffa33061889c6eca2f4c44417cab4a7)
+        ;
+
+        
+    
+    
+            marker_9f5a0379695bc7af1bdd7df6449ce9de.bindTooltip(
+                `<div>
+                     University of Louisiana at Lafayette
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9f5a0379695bc7af1bdd7df6449ce9de.setIcon(icon_2fa803dd7465e4e1e31f5e6e910687f3);
+            
+    
+            var marker_753c44ab12374f4f262e846b66b0e214 = L.marker(
+                [32.529, -92.638],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_835fda205b9eb86ef9ea3577f4784a8d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b2be1d5687678d8f82780419fad55557 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d360924e0b4dbf08b5bfa66e9fec4950 = $(`<div id="html_d360924e0b4dbf08b5bfa66e9fec4950" style="width: 100.0%; height: 100.0%;"><b>Louisiana Tech University</b><br>Ruston, Louisiana</div>`)[0];
+                popup_b2be1d5687678d8f82780419fad55557.setContent(html_d360924e0b4dbf08b5bfa66e9fec4950);
+            
+        
+
+        marker_753c44ab12374f4f262e846b66b0e214.bindPopup(popup_b2be1d5687678d8f82780419fad55557)
+        ;
+
+        
+    
+    
+            marker_753c44ab12374f4f262e846b66b0e214.bindTooltip(
+                `<div>
+                     Louisiana Tech University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_753c44ab12374f4f262e846b66b0e214.setIcon(icon_835fda205b9eb86ef9ea3577f4784a8d);
+            
+    
+            var marker_f9e684a3c593032bad066513a3ea9afc = L.marker(
+                [39.191, -96.58],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_840df15ba7b85f8fb27b2d0c0e90b4b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ecde689c43322ae2e84d6356300f0230 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cea29efae2b951a9ec9b1781f1974e46 = $(`<div id="html_cea29efae2b951a9ec9b1781f1974e46" style="width: 100.0%; height: 100.0%;"><b>Kansas State University</b><br>Manhattan, Kansas</div>`)[0];
+                popup_ecde689c43322ae2e84d6356300f0230.setContent(html_cea29efae2b951a9ec9b1781f1974e46);
+            
+        
+
+        marker_f9e684a3c593032bad066513a3ea9afc.bindPopup(popup_ecde689c43322ae2e84d6356300f0230)
+        ;
+
+        
+    
+    
+            marker_f9e684a3c593032bad066513a3ea9afc.bindTooltip(
+                `<div>
+                     Kansas State University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f9e684a3c593032bad066513a3ea9afc.setIcon(icon_840df15ba7b85f8fb27b2d0c0e90b4b3);
+            
+    
+            var marker_2cfcfbacf2267a0a39489aaf7ca3ce15 = L.marker(
+                [38.958, -95.247],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_f2fe9286bd8b202b0a491fe4cf75394b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a7ae31ba2e4d0dafabbc5421a1803694 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_42cab96609d8e52ae244ef222af8aea2 = $(`<div id="html_42cab96609d8e52ae244ef222af8aea2" style="width: 100.0%; height: 100.0%;"><b>University of Kansas</b><br>Lawrence, Kansas</div>`)[0];
+                popup_a7ae31ba2e4d0dafabbc5421a1803694.setContent(html_42cab96609d8e52ae244ef222af8aea2);
+            
+        
+
+        marker_2cfcfbacf2267a0a39489aaf7ca3ce15.bindPopup(popup_a7ae31ba2e4d0dafabbc5421a1803694)
+        ;
+
+        
+    
+    
+            marker_2cfcfbacf2267a0a39489aaf7ca3ce15.bindTooltip(
+                `<div>
+                     University of Kansas
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2cfcfbacf2267a0a39489aaf7ca3ce15.setIcon(icon_f2fe9286bd8b202b0a491fe4cf75394b);
+            
+    
+            var marker_94062d23c2d6af88cb78bc28eb4eb4a7 = L.marker(
+                [37.719, -97.293],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_a1a335a7bb18b8237888df5f84bb4b5f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e9fdeed47961490d2235d580067fcb07 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c37b5f3d54fac67350765dd59db1b7c = $(`<div id="html_5c37b5f3d54fac67350765dd59db1b7c" style="width: 100.0%; height: 100.0%;"><b>Wichita State University</b><br>Wichita, Kansas</div>`)[0];
+                popup_e9fdeed47961490d2235d580067fcb07.setContent(html_5c37b5f3d54fac67350765dd59db1b7c);
+            
+        
+
+        marker_94062d23c2d6af88cb78bc28eb4eb4a7.bindPopup(popup_e9fdeed47961490d2235d580067fcb07)
+        ;
+
+        
+    
+    
+            marker_94062d23c2d6af88cb78bc28eb4eb4a7.bindTooltip(
+                `<div>
+                     Wichita State University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_94062d23c2d6af88cb78bc28eb4eb4a7.setIcon(icon_a1a335a7bb18b8237888df5f84bb4b5f);
+            
+    
+            var marker_f440095e3e092883d838a3b8dc7676f9 = L.marker(
+                [38.94, -92.327],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_85357f52f21a9216dbd9e5a5e3cf2d62 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8cc12a5a46d212bf53c003c08b900947 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f47902676498a11f47c098fa25341098 = $(`<div id="html_f47902676498a11f47c098fa25341098" style="width: 100.0%; height: 100.0%;"><b>University of Missouri</b><br>Columbia, Missouri</div>`)[0];
+                popup_8cc12a5a46d212bf53c003c08b900947.setContent(html_f47902676498a11f47c098fa25341098);
+            
+        
+
+        marker_f440095e3e092883d838a3b8dc7676f9.bindPopup(popup_8cc12a5a46d212bf53c003c08b900947)
+        ;
+
+        
+    
+    
+            marker_f440095e3e092883d838a3b8dc7676f9.bindTooltip(
+                `<div>
+                     University of Missouri
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f440095e3e092883d838a3b8dc7676f9.setIcon(icon_85357f52f21a9216dbd9e5a5e3cf2d62);
+            
+    
+            var marker_18466d196c5f5d8f934a129183797e9e = L.marker(
+                [39.034, -94.579],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_2d6d8641cf95fedb15cd2716537ae468 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_37dbca04158fafe9b4673e675880a9bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3eb129f27089cc9303ee9556b2c8438a = $(`<div id="html_3eb129f27089cc9303ee9556b2c8438a" style="width: 100.0%; height: 100.0%;"><b>University of Missouri–Kansas City</b><br>Kansas City, Missouri</div>`)[0];
+                popup_37dbca04158fafe9b4673e675880a9bd.setContent(html_3eb129f27089cc9303ee9556b2c8438a);
+            
+        
+
+        marker_18466d196c5f5d8f934a129183797e9e.bindPopup(popup_37dbca04158fafe9b4673e675880a9bd)
+        ;
+
+        
+    
+    
+            marker_18466d196c5f5d8f934a129183797e9e.bindTooltip(
+                `<div>
+                     University of Missouri–Kansas City
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_18466d196c5f5d8f934a129183797e9e.setIcon(icon_2d6d8641cf95fedb15cd2716537ae468);
+            
+    
+            var marker_2873e88a915290ef1883a0b0d86a9dba = L.marker(
+                [37.197, -93.281],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_9e2574791e40597ff989a156ca666e6b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fde34e236abadc95c21d952fa788fc3a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a7477e18f91e1da2715d4a4011473ea1 = $(`<div id="html_a7477e18f91e1da2715d4a4011473ea1" style="width: 100.0%; height: 100.0%;"><b>Missouri State University</b><br>Springfield, Missouri</div>`)[0];
+                popup_fde34e236abadc95c21d952fa788fc3a.setContent(html_a7477e18f91e1da2715d4a4011473ea1);
+            
+        
+
+        marker_2873e88a915290ef1883a0b0d86a9dba.bindPopup(popup_fde34e236abadc95c21d952fa788fc3a)
+        ;
+
+        
+    
+    
+            marker_2873e88a915290ef1883a0b0d86a9dba.bindTooltip(
+                `<div>
+                     Missouri State University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2873e88a915290ef1883a0b0d86a9dba.setIcon(icon_9e2574791e40597ff989a156ca666e6b);
+            
+    
+            var marker_0e1aa71882287d55ed88800e2c0bfdbc = L.marker(
+                [38.648, -90.31],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_643fa37a3af1dba582e5809a05061f28 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c7cbc148c7a79a42cf768babdd527264 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e98fdc764e238d43b75650cf388dac69 = $(`<div id="html_e98fdc764e238d43b75650cf388dac69" style="width: 100.0%; height: 100.0%;"><b>Washington University in St. Louis</b><br>St. Louis, Missouri</div>`)[0];
+                popup_c7cbc148c7a79a42cf768babdd527264.setContent(html_e98fdc764e238d43b75650cf388dac69);
+            
+        
+
+        marker_0e1aa71882287d55ed88800e2c0bfdbc.bindPopup(popup_c7cbc148c7a79a42cf768babdd527264)
+        ;
+
+        
+    
+    
+            marker_0e1aa71882287d55ed88800e2c0bfdbc.bindTooltip(
+                `<div>
+                     Washington University in St. Louis
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0e1aa71882287d55ed88800e2c0bfdbc.setIcon(icon_643fa37a3af1dba582e5809a05061f28);
+            
+    
+            var marker_c974b2f77f8b4b852e30b085e26d4983 = L.marker(
+                [38.635, -90.235],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_f75815bb788e27b3112ca17b5d7b8d31 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkred",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_437069d9b0a7c257a01834ef360e8928 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_70182e9f6ff4ddfddb0abbba18c7cb1e = $(`<div id="html_70182e9f6ff4ddfddb0abbba18c7cb1e" style="width: 100.0%; height: 100.0%;"><b>Saint Louis University</b><br>St. Louis, Missouri</div>`)[0];
+                popup_437069d9b0a7c257a01834ef360e8928.setContent(html_70182e9f6ff4ddfddb0abbba18c7cb1e);
+            
+        
+
+        marker_c974b2f77f8b4b852e30b085e26d4983.bindPopup(popup_437069d9b0a7c257a01834ef360e8928)
+        ;
+
+        
+    
+    
+            marker_c974b2f77f8b4b852e30b085e26d4983.bindTooltip(
+                `<div>
+                     Saint Louis University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c974b2f77f8b4b852e30b085e26d4983.setIcon(icon_f75815bb788e27b3112ca17b5d7b8d31);
+            
+    
+            var marker_3918eca371840b7e1906c9573271cbca = L.marker(
+                [33.455, -88.793],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_b900865407506ddfb39a4210d8868db2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e5292a8605ff10a1dc4735cb90d8ef17 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a9d8db2ece4ba4b31e3b062d422e108 = $(`<div id="html_0a9d8db2ece4ba4b31e3b062d422e108" style="width: 100.0%; height: 100.0%;"><b>Mississippi State University</b><br>Starkville, Mississippi</div>`)[0];
+                popup_e5292a8605ff10a1dc4735cb90d8ef17.setContent(html_0a9d8db2ece4ba4b31e3b062d422e108);
+            
+        
+
+        marker_3918eca371840b7e1906c9573271cbca.bindPopup(popup_e5292a8605ff10a1dc4735cb90d8ef17)
+        ;
+
+        
+    
+    
+            marker_3918eca371840b7e1906c9573271cbca.bindTooltip(
+                `<div>
+                     Mississippi State University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3918eca371840b7e1906c9573271cbca.setIcon(icon_b900865407506ddfb39a4210d8868db2);
+            
+    
+            var marker_2bf1d65acd012230d30beacc3481d846 = L.marker(
+                [34.365, -89.538],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_d10be1a217821351ef217e0a03c09f80 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8affe1f46737661f2afee50c86555ea8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a5ede07bda014fdb25b1501ee050ceb = $(`<div id="html_6a5ede07bda014fdb25b1501ee050ceb" style="width: 100.0%; height: 100.0%;"><b>University of Mississippi</b><br>Oxford, Mississippi</div>`)[0];
+                popup_8affe1f46737661f2afee50c86555ea8.setContent(html_6a5ede07bda014fdb25b1501ee050ceb);
+            
+        
+
+        marker_2bf1d65acd012230d30beacc3481d846.bindPopup(popup_8affe1f46737661f2afee50c86555ea8)
+        ;
+
+        
+    
+    
+            marker_2bf1d65acd012230d30beacc3481d846.bindTooltip(
+                `<div>
+                     University of Mississippi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2bf1d65acd012230d30beacc3481d846.setIcon(icon_d10be1a217821351ef217e0a03c09f80);
+            
+    
+            var marker_a0fe3055f1380780c2edff61520be9e7 = L.marker(
+                [32.296, -90.206],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_507d1d3ccacfdc346a29999bd229e860 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e526fbd69f11c0a2dd63b04602508b7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_23fefee9264cfe1e80043d92649fb5ac = $(`<div id="html_23fefee9264cfe1e80043d92649fb5ac" style="width: 100.0%; height: 100.0%;"><b>Jackson State University</b><br>Jackson, Mississippi</div>`)[0];
+                popup_e526fbd69f11c0a2dd63b04602508b7f.setContent(html_23fefee9264cfe1e80043d92649fb5ac);
+            
+        
+
+        marker_a0fe3055f1380780c2edff61520be9e7.bindPopup(popup_e526fbd69f11c0a2dd63b04602508b7f)
+        ;
+
+        
+    
+    
+            marker_a0fe3055f1380780c2edff61520be9e7.bindTooltip(
+                `<div>
+                     Jackson State University
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a0fe3055f1380780c2edff61520be9e7.setIcon(icon_507d1d3ccacfdc346a29999bd229e860);
+            
+    
+            var marker_168557c24dfefc5a2c81c93ccbb8153c = L.marker(
+                [31.327, -89.335],
+                {
+}
+            ).addTo(map_cc53adca95f755658a74725e8a9077d1);
+        
+    
+            var icon_14eb07b862ee1ebe1b4703e1d7e03a2d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "darkgreen",
+  "iconColor": "white",
+  "icon": "university",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d937e7fbc489850e6a65fbf133a9222a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a659fadbc64a4b4f8217ace95f12fce0 = $(`<div id="html_a659fadbc64a4b4f8217ace95f12fce0" style="width: 100.0%; height: 100.0%;"><b>University of Southern Mississippi</b><br>Hattiesburg, Mississippi</div>`)[0];
+                popup_d937e7fbc489850e6a65fbf133a9222a.setContent(html_a659fadbc64a4b4f8217ace95f12fce0);
+            
+        
+
+        marker_168557c24dfefc5a2c81c93ccbb8153c.bindPopup(popup_d937e7fbc489850e6a65fbf133a9222a)
+        ;
+
+        
+    
+    
+            marker_168557c24dfefc5a2c81c93ccbb8153c.bindTooltip(
+                `<div>
+                     University of Southern Mississippi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_168557c24dfefc5a2c81c93ccbb8153c.setIcon(icon_14eb07b862ee1ebe1b4703e1d7e03a2d);
+            
+</script>
+</html>
